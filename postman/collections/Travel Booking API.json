@@ -1,0 +1,649 @@
+{
+	"info": {
+		"_postman_id": "2161d9ef-93d0-4d83-a2e6-46fa6d8120f0",
+		"name": "Travel Booking API",
+		"description": "API for managing travel bookings",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "28650973-2161d9ef-93d0-4d83-a2e6-46fa6d8120f0"
+	},
+	"item": [
+		{
+			"name": "bookings",
+			"item": [
+				{
+					"name": "{id}",
+					"item": [
+						{
+							"name": "Get a booking by ID",
+							"id": "8bdd588c-0e6b-4c13-b8c1-4a2bc4b59a53",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/bookings/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"bookings",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "-64547935",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "530089c7-62cf-4083-aa31-3f5033839e5e",
+									"name": "A booking object",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/bookings/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"bookings",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"uuid": "750d371a-a95d-43ce-93bf-f57ab4603a4e"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id\": 1,\n  \"user\": \"John Doe\",\n  \"destination\": \"Paris\",\n  \"date\": \"2024-09-15\"\n}"
+								},
+								{
+									"id": "8023dca5-8ad2-44c0-8f9e-49f67ee1dd67",
+									"name": "Server error",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/bookings/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"bookings",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"uuid": "b4bc1a24-e93f-4186-a0f4-4299fbd34176"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"message\": \"Internal server error\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Update a booking by ID",
+							"id": "cca5d98e-561d-4ddf-a9cc-5747f8bc1cd2",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": 37771827,\n  \"user\": \"Ut sint\",\n  \"destination\": \"in exercitation nisi\",\n  \"date\": \"2015-09-12\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/bookings/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"bookings",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "-64547935",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "6254f206-bb11-451c-a21b-ce34627d46b9",
+									"name": "Booking updated",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id\": 37771827,\n  \"user\": \"Ut sint\",\n  \"destination\": \"in exercitation nisi\",\n  \"date\": \"2015-09-12\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/bookings/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"bookings",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"uuid": "e0dbc4a5-71a4-4f1b-8b7c-6594df8f2f53"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id\": 1,\n  \"user\": \"John Doe\",\n  \"destination\": \"Paris\",\n  \"date\": \"2024-09-16\"\n}"
+								},
+								{
+									"id": "bec090d3-0f42-47f9-afc9-86681febdf13",
+									"name": "Server error",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id\": 37771827,\n  \"user\": \"Ut sint\",\n  \"destination\": \"in exercitation nisi\",\n  \"date\": \"2015-09-12\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/bookings/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"bookings",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"uuid": "0108199b-b19b-4b17-8b0f-cb14fa55d006"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"message\": \"Internal server error\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Delete a booking by ID",
+							"id": "2beed118-2e7f-4e83-a608-21f1eeb9d54b",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/bookings/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"bookings",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "-64547935",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "2f5799a7-b14e-4f3a-b049-cc9283a6f2fc",
+									"name": "Booking deleted",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/bookings/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"bookings",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"uuid": "993c74f4-f66b-4407-b0e0-f9501e3a593c"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"message\": \"Booking deleted successfully\"\n}"
+								},
+								{
+									"id": "fca476d5-ef43-49f0-b72c-4702ea2db20b",
+									"name": "Server error",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/bookings/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"bookings",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"uuid": "3bf24486-75ba-4f34-a203-7487218beb47"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"message\": \"Internal server error\"\n}"
+								}
+							]
+						}
+					],
+					"id": "2eae2fec-196c-419c-bab1-1bb9da81e7fd"
+				},
+				{
+					"name": "Get all bookings",
+					"id": "c96f14c0-2f8c-48b7-94e4-665bb625478b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/bookings",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"bookings"
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "ca946f80-660f-463b-9dfe-46f2f8f3cb04",
+							"name": "A list of bookings",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/bookings",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"bookings"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"uuid": "ab1a53bd-2ac3-4a22-8df9-0b349af32034"
+								}
+							],
+							"cookie": [],
+							"body": "[\n  {\n    \"id\": 1,\n    \"user\": \"John Doe\",\n    \"destination\": \"Paris\",\n    \"date\": \"2024-09-15\"\n  },\n  {\n    \"id\": 2,\n    \"user\": \"Jane Smith\",\n    \"destination\": \"New York\",\n    \"date\": \"2024-10-10\"\n  }\n]"
+						},
+						{
+							"id": "c2fa5e82-2d36-4e0c-9a9e-f8d1dfbf831c",
+							"name": "Server error",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/bookings",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"bookings"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"uuid": "259d929b-803a-4b77-a9bb-9a2f3378fef4"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"message\": \"Internal server error\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Create a new booking",
+					"id": "54cc2507-0ffb-4c7f-9b01-6f56167d7cb3",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"user\": \"dolor\",\n  \"destination\": \"ut dolor occaecat do nostrud\",\n  \"date\": \"1974-07-23\"\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/bookings",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"bookings"
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "833482eb-3288-4e90-b6db-208d54daa42b",
+							"name": "Booking created",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"user\": \"dolor\",\n  \"destination\": \"ut dolor occaecat do nostrud\",\n  \"date\": \"1974-07-23\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/bookings",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"bookings"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"uuid": "d9182c6b-a479-4004-b1b7-3936c5fa9947"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"id\": 3,\n  \"user\": \"Alice Wonderland\",\n  \"destination\": \"Tokyo\",\n  \"date\": \"2024-12-25\"\n}"
+						},
+						{
+							"id": "0c683ac1-1f5d-4b12-af94-03398b136ec2",
+							"name": "Server error",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"user\": \"dolor\",\n  \"destination\": \"ut dolor occaecat do nostrud\",\n  \"date\": \"1974-07-23\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/bookings",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"bookings"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"uuid": "cab24ac5-026d-47fc-9d43-d955ffdbda51"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"message\": \"Internal server error\"\n}"
+						}
+					]
+				}
+			],
+			"id": "49a04d15-a736-4811-854d-bae1c360cc9f"
+		}
+	],
+	"variable": [
+		{
+			"id": "735925f1-1e6a-4398-a3a3-d0d0db96ddb8",
+			"key": "baseUrl",
+			"value": "https://api.travelbooking.com/v1"
+		}
+	]
+}
